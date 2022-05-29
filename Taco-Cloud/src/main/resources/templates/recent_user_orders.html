@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Taco Cloud</title>
+</head>
+<body>
+    <h1>Recent Orders</h1>
+    <div th:each="order : ${orders}">
+        </label>
+        <label> Street:
+        <span th:text="${order.street}">ORDER</span><br/>
+        </label>
+        <labeL> City:
+        <span th:text="${order.city}">ORDER</span><br/>
+        </labeL>
+        <label> State:
+        <span th:text="${order.state}">ORDER</span><br/>
+        </label>
+        <label> Zip Code:
+        <span th:text="${order.zip}">ORDER</span><br/>
+        </label>
+        <label> Credit Card Number:
+        <span th:text="${order.ccNumber}">ORDER</span><br/>
+        </label>
+        <label> Credit Card Number Expiration Date:
+        <span th:text="${order.ccExpiration}">ORDER</span><br/>
+        </label>
+        <label> Placed At:
+        <span th:text="${order.placedAt}">ORDER</span><br/>
+        </label>
+    </div>
+    <div>
+        <a th:href="@{/tacos}" id="another">Design another taco</a><br/>
+    </div>
+</body>
+</html>
+

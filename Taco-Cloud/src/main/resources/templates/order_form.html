@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Taco Cloud</title>
+</head>
+<body>
+<form method="POST" th:action="@{/orders}" th:object="${order}">
+    <h1>Order your taco creations!</h1>
+    <img th:src="@{/images/TacoCloud.webp}"/>
+    <a th:href="@{/tacos}" id="another_taco">Design another taco</a><br/>
+    <div th:if="${#fields.hasErrors()}">
+ <span class="validationError">
+ Please correct the problems below and resubmit.
+ </span>
+    </div>
+    <h3>Deliver my taco masterpieces to...</h3>
+    <label>Street address: </label>
+    <input type="text" th:field="*{street}"/>
+    <br/>
+    <label>City: </label>
+    <input type="text" th:field="*{city}"/>
+    <br/>
+    <label>State: </label>
+    <input type="text" th:field="*{state}"/>
+    <br/>
+    <label>Zip code: </label>
+    <input type="text" th:field="*{zip}"/>
+    <br/>
+    <h3>Here's how I'll pay...</h3>
+    <label>Credit Card #: </label>
+    <input type="text" th:field="*{ccNumber}"/>
+    <br/>
+    <label>Expiration: </label>
+    <input type="text" th:field="*{ccExpiration}"/>
+    <br/>
+    <input type="submit" value="Submit order"/>
+</form>
+</body>
+</html>

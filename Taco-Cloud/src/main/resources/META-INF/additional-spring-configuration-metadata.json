@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "pageNumber",
+      "type": "java.lang.Integer",
+      "description":
+      "sets the i-th pageSize records to display in a list",
+      "sourceType": "com.raghad.Taco.Cloud.configurations.configuration_properties_holders.OrderProperties"
+    },
+    {
+      "name": "pageSize",
+      "type": "java.lang.Integer",
+      "description":
+      "Sets the maximum number of records to display in a list.",
+      "sourceType": "com.raghad.Taco.Cloud.configurations.configuration_properties_holders.OrderProperties"
+    }
+  ]
+}
